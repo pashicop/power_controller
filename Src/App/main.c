@@ -160,7 +160,7 @@ static State_t fsm(State_t state)
         case WAIT_OFF_STATE:
             if (read_sense() == PIN_LOW)
             {
-                MDR_Delay_ms(7000, get_freq());
+                MDR_Delay_ms(3000, get_freq());
                 relay_ctrl(false);
                 new_state = OFF_STATE; 
             }
